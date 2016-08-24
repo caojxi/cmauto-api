@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Providers;
+namespace Cmauto\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

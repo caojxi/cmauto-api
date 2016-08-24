@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Core;
+namespace Cmauto\Core;
 
 trait BaseEloquentQueryService
 {

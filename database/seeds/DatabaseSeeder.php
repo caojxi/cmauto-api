@@ -1,16 +1,12 @@
 <?php
 
-use ALP\Branch\Branch;
-use ALP\HeadSetting\HeadSetting;
-use ALP\User\User;
+use Cmauto\User\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
     protected $tables = [
-        'branches',
-        'users',
-        'head_settings',
+        'users'
     ];
 
     /**
@@ -22,9 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->clearTablesBeforeSeeding();
 
-        $this->seedBranchesTable();
-        $this->seedUsersTable();
-        $this->seedHeadSettingsTable();
+        $this->seedUsers();
     }
 
     public function clearTablesBeforeSeeding()
@@ -38,25 +32,11 @@ class DatabaseSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 
-    public function seedBranchesTable()
-    {
-        Branch::create([
-           'name' => 'Head Office'
-        ]);
-    }
-
-    private function seedUsersTable()
+    private function seedUsers()
     {
         User::create([
-            'email' => 'user@codium.com.au',
-            'password' => bcrypt('demo'),
-            'role' => 'head',
-            'branch_id' => 1,
+            'email' => 'caojxi@gmail.com',
+            'password' => 'password',
         ]);
-    }
-
-    private function seedHeadSettingsTable()
-    {
-        HeadSetting::create();
     }
 }

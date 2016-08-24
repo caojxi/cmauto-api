@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Http\Requests;
+namespace Cmauto\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

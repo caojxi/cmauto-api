@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Http\Controllers;
+namespace Cmauto\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

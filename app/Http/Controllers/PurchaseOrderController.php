@@ -1,13 +1,13 @@
 <?php
 
-namespace LearnGP\Http\Controllers;
+namespace Cmauto\Http\Controllers;
 
-use LearnGP\Core\EloquentBaseModel;
-use LearnGP\PurchaseOrder\PurchaseOrder;
-use LearnGP\PurchaseOrder\PurchaseOrderTransformer;
+use Cmauto\Core\EloquentBaseModel;
+use Cmauto\PurchaseOrder\PurchaseOrder;
+use Cmauto\PurchaseOrder\PurchaseOrderTransformer;
 use Illuminate\Http\Request;
 
-use LearnGP\Http\Requests;
+use Cmauto\Http\Requests;
 
 class PurchaseOrderController extends ApiController
 {

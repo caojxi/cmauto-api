@@ -1,9 +1,9 @@
 <?php
 
-namespace LearnGP\Http\Controllers;
+namespace Cmauto\Http\Controllers;
 
 use League\Fractal\TransformerAbstract;
-use LearnGP\Core\EloquentBaseModel;
+use Cmauto\Core\EloquentBaseModel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use League\Fractal\Manager;
@@ -95,20 +95,6 @@ abstract class ApiController extends Controller
         return response()->json('successfully deleted model', 200);
     }
 
-    public function reactivate($id)
-    {
-        $model = $this->getModel()->withTrashed()->where('id', $id)->firstOrFail();
-
-        if ($model->deleted_at) {
-            $model->deleted_at = null;
-            $model->save();
-
-            return $this->getSingleResponse($model);
-        }
-
-        return response()->json('', 500);
-    }
-
     /*
     |--------------------------------------------------------------------------
     | RESTFUL method helpers
@@ -170,7 +156,8 @@ abstract class ApiController extends Controller
         // order the collection
         foreach ((array)$request->get('order_by') as $orderColumn) {
             list($column, $direction) = strpos($orderColumn, '|') !== false ?
-                explode('|', $orderColumn) : [$orderColumn, 'asc'];
+                explode('|', $orderColumn) :
+                [$orderColumn, 'asc'];
 
             $builder = $builder->orderBy($column, $direction);
         }

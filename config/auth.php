@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => LearnGP\User\User::class,
+            'model' => Cmauto\User\User::class,
         ],
 
         // 'users' => [

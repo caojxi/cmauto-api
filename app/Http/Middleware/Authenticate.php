@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Http\Middleware;
+namespace Cmauto\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

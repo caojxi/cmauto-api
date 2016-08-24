@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\HeadSetting;
+namespace Cmauto\HeadSetting;
 
 use League\Fractal\TransformerAbstract;
 

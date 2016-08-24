@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Exceptions;
+namespace Cmauto\Exceptions;
 
 use Exception;
 use Illuminate\Database\QueryException;

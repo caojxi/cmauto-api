@@ -1,10 +1,10 @@
 <?php
 
-namespace LearnGP\Http\Controllers\Auth;
+namespace Cmauto\Http\Controllers\Auth;
 
-use LearnGP\User\UserTransformer;
+use Cmauto\User\UserTransformer;
 use Illuminate\Http\Request;
-use LearnGP\Http\Controllers\Controller;
+use Cmauto\Http\Controllers\Controller;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Item;
 use Tymon\JWTAuth\Exceptions\JWTException;
@@ -21,9 +21,7 @@ class AuthController extends Controller
 
     public function me()
     {
-        return response()->json([
-            'user' => $this->transformUser(JWTAuth::parseToken()->authenticate()),
-        ]);
+        return response()->json(['user' => $this->transformUser(JWTAuth::parseToken()->authenticate())]);
     }
 
     public function authenticate(Request $request)

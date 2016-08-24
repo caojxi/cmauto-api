@@ -17,6 +17,10 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 Route::group(['middleware' => ['jwt.auth']], function () {
     Route::get('me', 'Auth\AuthController@me');
+
+    Route::group(['prefix' => 'api'], function () {
+        Route::resource('users', 'UserController');
+    });
 });
 
 Route::get('/', function () {

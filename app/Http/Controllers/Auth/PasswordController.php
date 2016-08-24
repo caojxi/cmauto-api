@@ -1,8 +1,8 @@
 <?php
 
-namespace LearnGP\Http\Controllers\Auth;
+namespace Cmauto\Http\Controllers\Auth;
 
-use LearnGP\Http\Controllers\Controller;
+use Cmauto\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

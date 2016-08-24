@@ -1,8 +1,7 @@
 <?php
 
-namespace LearnGP\Http;
+namespace Cmauto\Http;
 
-use LearnGP\Http\Middleware\HeadOnly;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -25,7 +24,7 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \LearnGP\Http\Middleware\EncryptCookies::class,
+            \Cmauto\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
@@ -44,11 +43,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \LearnGP\Http\Middleware\Authenticate::class,
+        'auth' => \Cmauto\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
-        'guest' => \LearnGP\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Cmauto\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'headOnly' => HeadOnly::class,
     ];
 }

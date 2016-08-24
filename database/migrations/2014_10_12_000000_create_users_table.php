@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use LearnGP\User\User;
+use Cmauto\User\User;
 
 class CreateUsersTable extends Migration
 {
@@ -16,12 +16,9 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email')->unique();
-            $table->string('password');
-            $table->enum('role', [User::ROLE_ADMIN, User::ROLE_CLIENT])->default(User::ROLE_CLIENT);
-            $table->string('active_subscription_id')->nullable();
+            $table->string('password', 60);
+            $table->enum('role', [User::ROLE_ADMIN, User::ROLE_STAFF])->default(User::ROLE_STAFF);
             $table->rememberToken();
-            $table->timestamps();
-            $table->softDeletes();
         });
     }
 

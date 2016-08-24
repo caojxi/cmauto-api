@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        LearnGP\Providers\AppServiceProvider::class,
-        LearnGP\Providers\AuthServiceProvider::class,
-        LearnGP\Providers\EventServiceProvider::class,
-        LearnGP\Providers\RouteServiceProvider::class,
+        Cmauto\Providers\AppServiceProvider::class,
+        Cmauto\Providers\AuthServiceProvider::class,
+        Cmauto\Providers\EventServiceProvider::class,
+        Cmauto\Providers\RouteServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ],
 

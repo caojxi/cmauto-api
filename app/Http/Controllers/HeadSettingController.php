@@ -1,10 +1,10 @@
 <?php
 
-namespace LearnGP\Http\Controllers;
+namespace Cmauto\Http\Controllers;
 
-use LearnGP\HeadSetting\HeadSetting;
-use LearnGP\HeadSetting\HeadSettingTransformer;
-use LearnGP\Http\Requests;
+use Cmauto\HeadSetting\HeadSetting;
+use Cmauto\HeadSetting\HeadSettingTransformer;
+use Cmauto\Http\Requests;
 use Illuminate\Http\Request;
 
 class HeadSettingController extends ApiController

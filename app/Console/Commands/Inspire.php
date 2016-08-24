@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Console\Commands;
+namespace Cmauto\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

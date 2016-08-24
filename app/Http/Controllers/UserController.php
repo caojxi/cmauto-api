@@ -1,10 +1,10 @@
 <?php
 
-namespace LearnGP\Http\Controllers;
+namespace Cmauto\Http\Controllers;
 
-use LearnGP\User\User;
-use LearnGP\Http\Requests;
-use LearnGP\User\UserTransformer;
+use Cmauto\User\User;
+use Cmauto\Http\Requests;
+use Cmauto\User\UserTransformer;
 
 class UserController extends ApiController
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Providers;
+namespace Cmauto\Providers;
 
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'LearnGP\Model' => 'LearnGP\Policies\ModelPolicy',
+        'Cmauto\Model' => 'Cmauto\Policies\ModelPolicy',
     ];
 
     /**

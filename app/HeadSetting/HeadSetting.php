@@ -1,8 +1,8 @@
 <?php
 
-namespace LearnGP\HeadSetting;
+namespace Cmauto\HeadSetting;
 
-use LearnGP\Core\EloquentBaseModel;
+use Cmauto\Core\EloquentBaseModel;
 
 class HeadSetting extends EloquentBaseModel
 {

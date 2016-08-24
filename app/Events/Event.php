@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Events;
+namespace Cmauto\Events;
 
 abstract class Event
 {

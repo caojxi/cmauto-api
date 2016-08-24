@@ -1,12 +1,12 @@
 <?php
 
-namespace LearnGP\Http\Controllers;
+namespace Cmauto\Http\Controllers;
 
-use LearnGP\Contact\Contact;
-use LearnGP\Contact\ContactTransformer;
-use LearnGP\Core\EloquentBaseModel;
+use Cmauto\Contact\Contact;
+use Cmauto\Contact\ContactTransformer;
+use Cmauto\Core\EloquentBaseModel;
 
-use LearnGP\Http\Requests;
+use Cmauto\Http\Requests;
 
 class ContactController extends ApiController
 {

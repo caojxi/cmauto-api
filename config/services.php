@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => LearnGP\User::class,
+        'model' => Cmauto\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

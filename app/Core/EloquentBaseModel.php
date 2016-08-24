@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Core;
+namespace Cmauto\Core;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -31,5 +31,10 @@ abstract class EloquentBaseModel extends Model
 
         // return everything if no searchable columns defined
         return $query->where('id', -1);
+    }
+
+    public function id()
+    {
+        return $this->getKey();
     }
 }

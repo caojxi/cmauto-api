@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Http\Middleware;
+namespace Cmauto\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

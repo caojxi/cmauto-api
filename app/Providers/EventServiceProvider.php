@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Providers;
+namespace Cmauto\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'LearnGP\Events\SomeEvent' => [
-            'LearnGP\Listeners\EventListener',
+        'Cmauto\Events\SomeEvent' => [
+            'Cmauto\Listeners\EventListener',
         ],
     ];
 

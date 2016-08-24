@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnGP\Jobs;
+namespace Cmauto\Jobs;
 
 use Illuminate\Bus\Queueable;
 

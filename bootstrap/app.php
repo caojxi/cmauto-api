@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    LearnGP\Http\Kernel::class
+    Cmauto\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    LearnGP\Console\Kernel::class
+    Cmauto\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    LearnGP\Exceptions\Handler::class
+    Cmauto\Exceptions\Handler::class
 );
 
 /*

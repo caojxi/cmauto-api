@@ -1,24 +1,24 @@
 <?php
 
-namespace LearnGP\User;
+namespace Cmauto\User;
 
-use LearnGP\Branch\Branch;
-use LearnGP\Core\EloquentBaseModel;
+use Cmauto\Core\EloquentBaseModel;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends EloquentBaseModel implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract, JWTSubject
 {
     const ROLE_ADMIN = 'admin';
-    const ROLE_CLIENT = 'client';
+    const ROLE_STAFF = 'staff';
 
-    use Authenticatable, Authorizable, CanResetPassword, SoftDeletes;
+    public $timestamps = false;
+
+    use Authenticatable, Authorizable, CanResetPassword;
 
     /**
      * The attributes that are mass assignable.
@@ -27,9 +27,9 @@ class User extends EloquentBaseModel implements AuthenticatableContract, Authori
      */
     protected $fillable = [
         'email',
+        'name',
         'password',
         'role',
-        'active_subscription_id',
     ];
 
     /**
@@ -74,13 +74,18 @@ class User extends EloquentBaseModel implements AuthenticatableContract, Authori
         return $this->role === self::ROLE_ADMIN;
     }
 
-    public function isClient()
+    public function isStaff()
     {
-        return $this->role === self::ROLE_CLIENT;
+        return $this->role === self::ROLE_STAFF;
     }
 
     function getSearchableColumns()
     {
-        return ['email', 'active_subscription_id'];
+        return ['email', 'name'];
+    }
+
+    public function setPasswordAttribute($val)
+    {
+        $this->attributes['password'] = bcrypt($val);
     }
 }
