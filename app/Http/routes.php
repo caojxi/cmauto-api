@@ -20,6 +20,8 @@ Route::group(['middleware' => ['jwt.auth']], function () {
 
     Route::group(['prefix' => 'api'], function () {
         Route::resource('users', 'UserController');
+
+        Route::resource('clients', 'ClientController');
     });
 });
 
